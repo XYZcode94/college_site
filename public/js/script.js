@@ -139,7 +139,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
   const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  const res = await fetch("http://localhost:5000/api/auth/login", {
+  const res = await fetch("https://college-backend.onrender.com/api/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password })
@@ -276,7 +276,7 @@ document.getElementById("feedbackForm").addEventListener("submit", async functio
   const name = document.getElementById("userName").value.trim();
   const message = document.getElementById("userFeedback").value.trim();
 
-  const res = await fetch("http://localhost:5000/api/feedback", {
+  const res = await fetch("https://college-backend.onrender.com/api/feedback", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, message })
@@ -295,7 +295,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   const [name, email, message] = Array.from(this.elements).map(el => el.value.trim());
 
-  const res = await fetch("http://localhost:5000/api/contact", {
+  const res = await fetch("https://college-backend.onrender.com/api/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, message })
@@ -342,7 +342,7 @@ function loadDashboard(role) {
 const token = localStorage.getItem("token");
 
 async function loadUsers() {
-  const res = await fetch("http://localhost:5000/api/auth/users", {
+  const res = await fetch("https://college-backend.onrender.com/api/auth/users", {
     headers: { Authorization: token }
   });
   const users = await res.json();
@@ -350,13 +350,13 @@ async function loadUsers() {
 }
 
 async function loadFeedbacks() {
-  const res = await fetch("http://localhost:5000/api/feedback");
+  const res = await fetch("https://college-backend.onrender.com/api/feedback");
   const data = await res.json();
   showAdminData("Feedback", data);
 }
 
 async function loadContacts() {
-  const res = await fetch("http://localhost:5000/api/contact");
+  const res = await fetch("https://college-backend.onrender.com/api/contact");
   const data = await res.json();
   showAdminData("Contact Messages", data);
 }
@@ -376,7 +376,7 @@ async function verifyRoll() {
   const output = document.getElementById("rollResult");
   output.innerHTML = "⏳ Fetching...";
 
-  const res = await fetch(`http://localhost:5000/api/results/${roll}`);
+  const res = await fetch(`https://college-backend.onrender.com/api/results/${roll}`);
   const data = await res.json();
 
   if (data.msg === "Result not found") {
@@ -404,7 +404,7 @@ document.getElementById("uploadResultForm").addEventListener("submit", async fun
     status: document.getElementById("resStatus").value
   };
 
-  const res = await fetch("http://localhost:5000/api/results", {
+  const res = await fetch("https://college-backend.onrender.com/api/results", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
