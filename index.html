@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering College | Home</title>
+
+  <!-- Meta -->
+  <meta name="description"
+    content="Official Engineering College Portal - Explore admissions, departments, events and more.">
+  <meta name="keywords" content="engineering college, admissions, AI, technology, courses, student portal">
+  <meta name="author" content="Prem Prakash">
+
+  <!-- CSS & Favicon -->
+  <link rel="stylesheet" href="public/css/style.css" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+</head>
+
+<body>
+
+  <!-- 🌟 Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to <span class="typewriter"
+          data-text="Future of Engineering.||Innovation Hub.||Your Career Gateway."></span></h1>
+      <p>Empowering students in Science, Tech & AI with real-world skills.</p>
+      <div class="hero-links">
+        <a href="#admissions" class="btn primary">Apply Now</a>
+        <a href="#login" class="btn accent">Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔔 Spotlight Section -->
+  <section class="spotlight">
+    <h2>🎯 Upcoming: AI/ML Bootcamp – July 20–25</h2>
+    <p>Register by July 18 and unlock real-time project experience!</p>
+  </section>
+
+  <!-- 🎓 About College -->
+  <section class="about" id="about">
+    <div class="about-container">
+
+      <!-- Mission & Vision -->
+      <div class="mission">
+        <h2>🎯 Our Mission & Vision</h2>
+        <ul class="svg-list">
+          <li><img src="images/target.svg" alt="Target"> Empower students through practical engineering education.</li>
+          <li><img src="images/innovation.svg" alt="Innovation"> Foster innovation, creativity, and research culture.
+          </li>
+          <li><img src="images/global.svg" alt="Global"> Become a globally recognized center of excellence.</li>
+        </ul>
+      </div>
+
+      <!-- Key Stats -->
+      <div class="stats">
+        <div class="stat-box">
+          <h3>2500+</h3>
+          <p>Students Enrolled</p>
+        </div>
+        <div class="stat-box">
+          <h3>40+</h3>
+          <p>Courses Offered</p>
+        </div>
+        <div class="stat-box">
+          <h3>98%</h3>
+          <p>Placement Rate</p>
+        </div>
+      </div>
+
+      <!-- Campus Highlights Carousel -->
+      <div class="carousel">
+        <h2>🏞 Campus Highlights</h2>
+        <div class="carousel-track">
+          <img src="images/campus1.jpg" class="carousel-img" alt="Campus View 1">
+          <img src="images/campus2.jpg" class="carousel-img" alt="Campus View 2">
+          <img src="images/campus3.jpg" class="carousel-img" alt="Campus View 3">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🏛 Departments & Courses -->
+  <section class="departments" id="departments">
+    <h2>🏛 Departments</h2>
+
+    <!-- Filter Buttons -->
+    <div class="dept-filters">
+      <button class="filter-btn active" data-dept="all">All</button>
+      <button class="filter-btn" data-dept="science">Science</button>
+      <button class="filter-btn" data-dept="commerce">Commerce</button>
+      <button class="filter-btn" data-dept="arts">Arts</button>
+      <button class="filter-btn" data-dept="ai">AI & Tech</button>
+    </div>
+
+    <!-- Course Cards -->
+    <div class="course-list">
+      <!-- Sample Course -->
+      <div class="course-card" data-dept="ai">
+        <h3>B.Tech in Artificial Intelligence</h3>
+        <p><strong>Duration:</strong> 4 Years | <strong>Fee:</strong> ₹1.2L/yr</p>
+        <button class="view-course" data-title="B.Tech in AI" data-faculty="Dr. A. Sharma"
+          data-syllabus="Machine Learning, Deep Learning, NLP...">View Details</button>
+      </div>
+
+      <div class="course-card" data-dept="science">
+        <h3>B.Sc in Physics</h3>
+        <p><strong>Duration:</strong> 3 Years | <strong>Fee:</strong> ₹50K/yr</p>
+        <button class="view-course" data-title="B.Sc Physics" data-faculty="Prof. N. Gupta"
+          data-syllabus="Mechanics, Optics, Thermodynamics...">View Details</button>
+      </div>
+
+      <div class="course-card" data-dept="commerce">
+        <h3>B.Com (Accounting & Finance)</h3>
+        <p><strong>Duration:</strong> 3 Years | <strong>Fee:</strong> ₹45K/yr</p>
+        <button class="view-course" data-title="B.Com" data-faculty="Dr. R. Mehta"
+          data-syllabus="Economics, Taxation, Auditing...">View Details</button>
+      </div>
+
+      <!-- Add more courses as needed -->
+    </div>
+  </section>
+
+
+  <!-- 🎓 Admissions Hub -->
+  <section class="admissions" id="admissions">
+    <h2>🎓 Admissions Hub</h2>
+
+    <!-- Step-by-Step Application -->
+    <div class="apply-wizard">
+      <h3>How to Apply</h3>
+      <ol>
+        <li>Fill out the online application form.</li>
+        <li>Upload required documents (10th, 12th marksheets, ID).</li>
+        <li>Pay the application fee online.</li>
+        <li>Track application status in student dashboard.</li>
+      </ol>
+    </div>
+
+    <!-- Eligibility Checker -->
+    <div class="eligibility-checker">
+      <h3>Eligibility Checker</h3>
+      <form id="eligibilityForm">
+        <label>12th Marks (%):</label>
+        <input type="number" id="marks" required min="0" max="100" />
+        <button type="submit">Check</button>
+        <p id="eligibilityResult"></p>
+      </form>
+    </div>
+
+    <!-- Fee Calculator -->
+    <div class="fee-calculator">
+      <h3>Fee Calculator</h3>
+      <form id="feeForm">
+        <label>Select Course Duration (in years):</label>
+        <select id="years">
+          <option value="3">3 Years</option>
+          <option value="4">4 Years</option>
+        </select>
+
+        <label>Yearly Fee (₹):</label>
+        <input type="number" id="feePerYear" value="50000" required />
+
+        <button type="submit">Calculate Total Fee</button>
+        <p id="feeResult"></p>
+      </form>
+    </div>
+
+    <!-- Scholarships & Countdown -->
+    <div class="scholarship-box">
+      <h3>🎁 Scholarships & Deadlines</h3>
+      <p>Apply before: <span id="deadline">2025-07-30T23:59:59</span></p>
+      <p>⏳ Time left: <span id="countdown"></span></p>
+    </div>
+  </section>
+
+
+
+  <!-- 🧑‍🎓 Student Portal -->
+  <section class="portal" id="login">
+    <h2>🧑‍🎓 Role-Based Login</h2>
+
+    <!-- Role Selection -->
+    <div class="role-buttons">
+      <button class="role-btn" onclick="showLogin('student')">Student</button>
+      <button class="role-btn" onclick="showLogin('faculty')">Faculty</button>
+      <button class="role-btn" onclick="showLogin('admin')">Admin</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="login-form">
+      <h3 id="loginRoleTitle">Login</h3>
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p id="loginStatus"></p>
+    </form>
+
+    <!-- Dashboards (hidden until login) -->
+    <div id="dashboard" class="dashboard" style="display:none;">
+      <h3>Welcome, <span id="userRole">User</span></h3>
+      <div id="dashboardContent">
+        <!-- Dynamic dashboard content will be loaded here -->
+      </div>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+    <!-- Admin Tools -->
+    <div id="adminPanel" style="display:none;">
+      <h3>👑 Admin Control Panel</h3>
+
+      <button onclick="loadUsers()">📋 View Users</button>
+      <button onclick="loadFeedbacks()">💬 View Feedback</button>
+      <button onclick="loadContacts()">📨 View Contact Messages</button>
+
+      <div id="adminOutput" class="admin-box"></div>
+    </div>
+    <div class="tool-box">
+      <h4>📤 Upload Student Result</h4>
+      <form id="uploadResultForm">
+        <input type="text" placeholder="Roll Number" id="resRoll" required />
+        <input type="text" placeholder="Student Name" id="resName" required />
+        <input type="text" placeholder="Department" id="resDept" required />
+        <input type="number" placeholder="Marks" id="resMarks" required />
+        <input type="text" placeholder="Grade" id="resGrade" required />
+        <input type="text" placeholder="Status (Pass/Fail)" id="resStatus" required />
+        <button type="submit">Upload Result</button>
+        <p id="uploadStatus"></p>
+      </form>
+    </div>
+
+
+  </section>
+
+
+  <!-- 🛠️ Smart Tools -->
+  <section class="smart-tools" id="tools">
+    <h2>🛠️ Smart Tools</h2>
+
+    <!-- 🔎 Directory -->
+    <div class="tool-box">
+      <h3>🔎 Search Directory</h3>
+      <input type="text" id="directorySearch" placeholder="Search by name, room or lab..." />
+      <ul id="directoryResults"></ul>
+    </div>
+
+    <!-- 🎓 Result Verifier -->
+    <!-- 🎓 Roll Number Verifier -->
+    <div class="tool-box">
+      <h3>🎓 Roll Number Verifier</h3>
+      <input type="text" id="rollInput" placeholder="Enter Roll Number" />
+      <button onclick="verifyRoll()">Verify</button>
+      <div id="rollResult" class="admin-box"></div>
+    </div>
+
+
+    <!-- 💬 Feedback -->
+    <div class="tool-box">
+      <h3>💬 Feedback Portal</h3>
+      <form id="feedbackForm">
+        <input type="text" id="userName" placeholder="Your Name" required />
+        <textarea id="userFeedback" placeholder="Enter your feedback..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+        <p id="feedbackMsg"></p>
+      </form>
+    </div>
+
+    <!-- 🤖 AI Chatbot -->
+    <div class="tool-box chatbot-box">
+      <h3>🤖 AI Chatbot Assistant</h3>
+      <div class="chat-display" id="chatDisplay">
+        <p class="bot">Hi! I'm your assistant. Ask me anything!</p>
+      </div>
+      <input type="text" id="chatInput" placeholder="Type a question..." />
+      <button onclick="sendChat()">Send</button>
+    </div>
+  </section>
+
+
+  <!-- Modal Popup -->
+  <div id="courseModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p><strong>Fa
+
+
+
+          <!-- 🔽 Scroll Target Placeholder for later sections -->
+          <div class="content-placeholder">
+            <!-- More sections will be added here -->
+          </div>
+
+          <!-- JS -->
+          <script src="js/script.js"></script>
+</body>
+
+</html>
